@@ -1,0 +1,370 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0000"/>
+      <stop offset="30%" style="stop-color:#150005"/>
+      <stop offset="60%" style="stop-color:#0a0010"/>
+      <stop offset="100%" style="stop-color:#050005"/>
+    </linearGradient>
+
+    <linearGradient id="bloodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b0000"/>
+      <stop offset="40%" style="stop-color:#cc0000"/>
+      <stop offset="100%" style="stop-color:#4a0000"/>
+    </linearGradient>
+
+    <linearGradient id="bloodGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#550000;stop-opacity:0.9"/>
+    </linearGradient>
+
+    <radialGradient id="glowRed" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:0.15"/>
+      <stop offset="50%" style="stop-color:#880000;stop-opacity:0.08"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="evilEyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff0000"/>
+      <stop offset="40%" style="stop-color:#cc0000"/>
+      <stop offset="80%" style="stop-color:#880000"/>
+      <stop offset="100%" style="stop-color:#440000"/>
+    </radialGradient>
+
+    <linearGradient id="scarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#990000"/>
+      <stop offset="50%" style="stop-color:#cc2222"/>
+      <stop offset="100%" style="stop-color:#660000"/>
+    </linearGradient>
+
+    <linearGradient id="furGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#555555"/>
+      <stop offset="100%" style="stop-color:#2a2a2a"/>
+    </linearGradient>
+
+    <linearGradient id="maskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+
+    <linearGradient id="textBlood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff2222"/>
+      <stop offset="50%" style="stop-color:#cc0000"/>
+      <stop offset="100%" style="stop-color:#880000"/>
+    </linearGradient>
+
+    <linearGradient id="leetTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#aa0000;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#550000;stop-opacity:0.4"/>
+    </linearGradient>
+
+    <filter id="neonRed" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="ultraGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="bloodDripShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="fog">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feComponentTransfer in="grayNoise" result="alphaFog">
+        <feFuncA type="linear" slope="0.15" intercept="0"/>
+      </feComponentTransfer>
+      <feFlood flood-color="#330000" result="color"/>
+      <feComposite in="color" in2="alphaFog" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- BACKGROUND -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" filter="url(#fog)" opacity="0.5"/>
+  <ellipse cx="400" cy="220" rx="300" ry="280" fill="url(#glowRed)"/>
+
+  <!-- BACKGROUND OVERLAY TEXT: __W1ly_ra3cc00n__ -->
+  <text x="400" y="300" text-anchor="middle" font-family="'Courier New', monospace" font-size="110" font-weight="bold" fill="#ff0000" opacity="0.04" letter-spacing="3">
+    W1ly
+  </text>
+  <text x="400" y="420" text-anchor="middle" font-family="'Courier New', monospace" font-size="110" font-weight="bold" fill="#ff0000" opacity="0.04" letter-spacing="3">
+    ra3cc00n
+  </text>
+
+  <!-- Repeated watermark -->
+  <g opacity="0.025" fill="#ff0000" font-family="monospace" font-size="14">
+    <text x="20" y="30">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="60" y="55">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="10" y="80">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="50" y="105">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="30" y="520">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="70" y="545">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="15" y="570">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+    <text x="45" y="595">__W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__ __W1ly_ra3cc00n__</text>
+  </g>
+
+  <!-- Blood splatter background -->
+  <g fill="#880000" opacity="0.15">
+    <circle cx="150" cy="100" r="15"/>
+    <circle cx="155" cy="108" r="8"/>
+    <circle cx="140" cy="95" r="5"/>
+    <circle cx="165" cy="115" r="4"/>
+    <circle cx="630" cy="80" r="12"/>
+    <circle cx="640" cy="90" r="6"/>
+    <circle cx="620" cy="75" r="4"/>
+    <circle cx="100" cy="450" r="10"/>
+    <circle cx="108" cy="460" r="5"/>
+    <circle cx="680" cy="420" r="13"/>
+    <circle cx="690" cy="430" r="7"/>
+    <circle cx="670" cy="415" r="4"/>
+  </g>
+
+  <!-- === EVIL RACCOON === -->
+
+  <!-- Left Ear (torn) -->
+  <polygon points="295,105 265,35 335,75" fill="#4a4a4a" stroke="#333" stroke-width="1"/>
+  <polygon points="300,100 275,45 328,80" fill="#3a3a3a"/>
+  <polygon points="280,55 290,65 275,68" fill="url(#bgGrad)"/>
+  <path d="M278,58 Q275,70 277,80" stroke="#990000" stroke-width="2" fill="none" opacity="0.7"/>
+
+  <!-- Right Ear -->
+  <polygon points="505,105 535,35 465,75" fill="#4a4a4a" stroke="#333" stroke-width="1"/>
+  <polygon points="500,100 525,45 472,80" fill="#3a3a3a"/>
+
+  <!-- Head -->
+  <ellipse cx="400" cy="185" rx="130" ry="118" fill="url(#furGrad)"/>
+
+  <!-- Dark fur patches -->
+  <ellipse cx="370" cy="140" rx="25" ry="15" fill="#3a3a3a" opacity="0.5"/>
+  <ellipse cx="440" cy="145" rx="20" ry="12" fill="#3a3a3a" opacity="0.4"/>
+
+  <!-- MASK BAND -->
+  <path d="M290,170 Q315,145 360,158 Q400,163 440,158 Q485,145 510,170 Q500,210 445,200 Q400,195 355,200 Q300,210 290,170 Z" fill="url(#maskGrad)" stroke="#111" stroke-width="1.5"/>
+
+  <!-- LEFT EYE -->
+  <ellipse cx="350" cy="182" rx="36" ry="28" fill="#080000"/>
+  <path d="M318,162 Q335,170 355,168 Q370,166 382,158" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M325,182 Q335,168 350,165 Q365,168 378,182 Q365,194 350,196 Q335,194 325,182 Z" fill="url(#evilEyeGlow)" filter="url(#heavyGlow)"/>
+  <ellipse cx="350" cy="182" rx="4" ry="14" fill="#200000"/>
+  <ellipse cx="344" cy="175" rx="3" ry="2" fill="#ff6666" opacity="0.8"/>
+
+  <!-- RIGHT EYE -->
+  <ellipse cx="450" cy="182" rx="36" ry="28" fill="#080000"/>
+  <path d="M418,158 Q435,166 450,168 Q465,170 482,162" stroke="#2a2a2a" stroke-width="4" fill="none"/>
+  <path d="M425,182 Q435,168 450,165 Q465,168 478,182 Q465,194 450,196 Q435,194 425,182 Z" fill="url(#evilEyeGlow)" filter="url(#heavyGlow)"/>
+  <ellipse cx="450" cy="182" rx="4" ry="14" fill="#200000"/>
+  <ellipse cx="444" cy="175" rx="3" ry="2" fill="#ff6666" opacity="0.8"/>
+
+  <!-- SCAR across right eye -->
+  <path d="M430,140 Q445,165 455,185 Q460,200 465,230" stroke="url(#scarGrad)" stroke-width="3.5" fill="none" stroke-linecap="round" filter="url(#bloodDripShadow)"/>
+  <path d="M432,142 Q447,167 456,186 Q461,201 463,225" stroke="#ff3333" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <line x1="437" y1="155" x2="447" y2="152" stroke="#880000" stroke-width="1.5" opacity="0.6"/>
+  <line x1="442" y1="170" x2="452" y2="167" stroke="#880000" stroke-width="1.5" opacity="0.6"/>
+  <line x1="450" y1="195" x2="460" y2="192" stroke="#880000" stroke-width="1.5" opacity="0.6"/>
+  <line x1="455" y1="210" x2="465" y2="207" stroke="#880000" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- NOSE -->
+  <ellipse cx="400" cy="225" rx="14" ry="10" fill="#1a0000" stroke="#330000" stroke-width="1"/>
+  <ellipse cx="400" cy="223" rx="5" ry="3" fill="#2a1111" opacity="0.5"/>
+
+  <!-- EVIL GRIN WITH FANGS -->
+  <path d="M365,245 Q380,255 400,260 Q420,255 435,245" stroke="#1a0000" stroke-width="2.5" fill="none"/>
+  <path d="M370,245 Q385,260 400,265 Q415,260 430,245 Q415,252 400,255 Q385,252 370,245 Z" fill="#0a0000"/>
+  <polygon points="378,248 382,248 380,265" fill="#ccccaa" stroke="#999977" stroke-width="0.5"/>
+  <polygon points="418,248 422,248 420,265" fill="#ccccaa" stroke="#999977" stroke-width="0.5"/>
+  <line x1="388" y1="248" x2="388" y2="254" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="394" y1="249" x2="394" y2="256" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="400" y1="249" x2="400" y2="257" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="406" y1="249" x2="406" y2="256" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="412" y1="248" x2="412" y2="254" stroke="#aaaaaa" stroke-width="1.5"/>
+
+  <!-- BLOOD DRIPS FROM MOUTH -->
+  <path d="M380,262 Q378,280 381,300 Q382,310 379,320" stroke="url(#bloodGrad)" stroke-width="3" fill="none" filter="url(#bloodDripShadow)" stroke-linecap="round"/>
+  <ellipse cx="379" cy="322" rx="4" ry="5" fill="#aa0000" filter="url(#bloodDripShadow)"/>
+  <path d="M400,264 Q398,285 400,310 Q401,330 398,345" stroke="url(#bloodGrad)" stroke-width="2.5" fill="none" filter="url(#bloodDripShadow)" stroke-linecap="round"/>
+  <ellipse cx="398" cy="347" rx="3.5" ry="4.5" fill="#990000" filter="url(#bloodDripShadow)"/>
+  <path d="M420,262 Q422,275 419,295 Q418,305 420,312" stroke="url(#bloodGrad)" stroke-width="2" fill="none" filter="url(#bloodDripShadow)" stroke-linecap="round"/>
+  <ellipse cx="420" cy="314" rx="3" ry="4" fill="#aa0000" filter="url(#bloodDripShadow)"/>
+  <path d="M380,265 Q379,272 380,278" stroke="#cc0000" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <circle cx="380" cy="280" r="2" fill="#cc0000" opacity="0.7"/>
+
+  <!-- Blood on face -->
+  <g fill="#880000" opacity="0.4">
+    <circle cx="325" cy="200" r="3"/>
+    <circle cx="320" cy="195" r="2"/>
+    <circle cx="330" cy="205" r="1.5"/>
+    <circle cx="470" cy="170" r="2.5"/>
+    <circle cx="475" cy="175" r="1.5"/>
+    <circle cx="390" cy="250" r="2"/>
+    <circle cx="410" cy="248" r="1.5"/>
+  </g>
+
+  <!-- Whiskers -->
+  <line x1="300" y1="215" x2="340" y2="220" stroke="#666" stroke-width="0.8" opacity="0.5"/>
+  <line x1="295" y1="230" x2="338" y2="228" stroke="#666" stroke-width="0.8" opacity="0.3"/>
+  <line x1="302" y1="245" x2="342" y2="238" stroke="#666" stroke-width="0.8" opacity="0.4"/>
+  <line x1="500" y1="215" x2="460" y2="220" stroke="#666" stroke-width="0.8" opacity="0.5"/>
+  <line x1="505" y1="230" x2="462" y2="228" stroke="#666" stroke-width="0.8" opacity="0.3"/>
+  <line x1="498" y1="245" x2="458" y2="238" stroke="#666" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Blood from head -->
+  <path d="M340,130 Q338,150 340,170" stroke="url(#bloodGrad2)" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M460,135 Q462,155 460,175 Q459,185 461,192" stroke="url(#bloodGrad2)" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M310,155 Q308,170 310,180" stroke="url(#bloodGrad2)" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Claw marks on face -->
+  <g stroke="#880000" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round">
+    <path d="M290,150 Q310,180 300,210"/>
+    <path d="M298,148 Q318,178 308,208"/>
+    <path d="M306,146 Q326,176 316,206"/>
+  </g>
+
+  <!-- HOODIE -->
+  <path d="M270,280 Q275,258 310,248 Q350,268 400,272 Q450,268 490,248 Q525,258 530,280 L555,370 L245,370 Z" fill="#0a0010" stroke="#1a0020" stroke-width="1"/>
+  <ellipse cx="350" cy="330" rx="15" ry="20" fill="#330000" opacity="0.3"/>
+  <ellipse cx="420" cy="340" rx="12" ry="15" fill="#2a0000" opacity="0.25"/>
+  <ellipse cx="380" cy="355" rx="18" ry="10" fill="#220000" opacity="0.2"/>
+  <line x1="382" y1="278" x2="375" y2="340" stroke="#333" stroke-width="1.5"/>
+  <line x1="418" y1="278" x2="425" y2="340" stroke="#333" stroke-width="1.5"/>
+  <circle cx="375" cy="342" r="3" fill="#444"/>
+  <circle cx="425" cy="342" r="3" fill="#444"/>
+
+  <!-- === MAIN NAME: Wily_Racc00n === -->
+
+  <!-- Red glow behind -->
+  <text x="400" y="440" text-anchor="middle" font-family="'Courier New', monospace" font-size="52" font-weight="bold" fill="#ff0000" opacity="0.15" filter="url(#ultraGlow)">
+    Wily_Racc00n
+  </text>
+
+  <!-- Shadow -->
+  <text x="400" y="442" text-anchor="middle" font-family="'Courier New', monospace" font-size="52" font-weight="bold" fill="#660000" opacity="0.3">
+    Wily_Racc00n
+  </text>
+
+  <!-- Main text -->
+  <text x="400" y="440" text-anchor="middle" font-family="'Courier New', monospace" font-size="52" font-weight="bold" fill="url(#textBlood)" filter="url(#neonRed)">
+    Wily_Racc00n
+  </text>
+
+  <!-- Blood drips from letters -->
+  <path d="M188,445 Q187,460 189,478" stroke="#880000" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="189" cy="480" r="2.5" fill="#880000" opacity="0.6"/>
+  <path d="M365,445 Q364,462 366,480 Q367,490 365,498" stroke="#880000" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="365" cy="500" r="3" fill="#990000" opacity="0.6"/>
+  <path d="M430,445 Q432,458 430,470" stroke="#880000" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="430" cy="472" r="2" fill="#880000" opacity="0.5"/>
+  <path d="M588,445 Q590,465 588,485" stroke="#880000" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="588" cy="487" r="2.5" fill="#880000" opacity="0.5"/>
+
+  <!-- Claw marks flanking name -->
+  <g stroke="#cc0000" stroke-width="2" opacity="0.5" stroke-linecap="round">
+    <path d="M120,420 L155,440"/>
+    <path d="M115,430 L150,450"/>
+    <path d="M110,440 L145,460"/>
+  </g>
+  <g stroke="#cc0000" stroke-width="2" opacity="0.5" stroke-linecap="round">
+    <path d="M680,420 L645,440"/>
+    <path d="M685,430 L650,450"/>
+    <path d="M690,440 L655,460"/>
+  </g>
+
+  <!-- === LEET NAME BELOW: __W1ly_ra3cc00n__ === -->
+
+  <!-- Glow -->
+  <text x="400" y="490" text-anchor="middle" font-family="'Courier New', monospace" font-size="22" font-weight="bold" fill="#ff0000" opacity="0.1" filter="url(#ultraGlow)">
+    __W1ly_ra3cc00n__
+  </text>
+
+  <!-- Main leet text -->
+  <text x="400" y="490" text-anchor="middle" font-family="'Courier New', monospace" font-size="22" font-weight="bold" filter="url(#neonRed)">
+    <tspan fill="#550000">__</tspan>
+    <tspan fill="#cc0000">W</tspan>
+    <tspan fill="#ff0000">1</tspan>
+    <tspan fill="#cc0000">ly</tspan>
+    <tspan fill="#550000">_</tspan>
+    <tspan fill="#cc0000">ra</tspan>
+    <tspan fill="#ff0000">3</tspan>
+    <tspan fill="#cc0000">cc</tspan>
+    <tspan fill="#ff0000">00</tspan>
+    <tspan fill="#cc0000">n</tspan>
+    <tspan fill="#550000">__</tspan>
+  </text>
+
+  <!-- Separator lines -->
+  <line x1="160" y1="505" x2="340" y2="505" stroke="#660000" stroke-width="1" opacity="0.4"/>
+  <line x1="460" y1="505" x2="640" y2="505" stroke="#660000" stroke-width="1" opacity="0.4"/>
+  <polygon points="400,498 410,506 400,514 390,506" fill="#cc0000" opacity="0.6" filter="url(#neonRed)"/>
+
+  <!-- Bloody paw prints -->
+  <g transform="translate(130, 520)" opacity="0.25">
+    <circle cx="0" cy="0" r="5" fill="#880000"/>
+    <circle cx="-6" cy="-9" r="3" fill="#880000"/>
+    <circle cx="0" cy="-11" r="3" fill="#880000"/>
+    <circle cx="6" cy="-9" r="3" fill="#880000"/>
+    <path d="M5,3 Q15,8 25,6" stroke="#660000" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+  <g transform="translate(670, 520)" opacity="0.25">
+    <circle cx="0" cy="0" r="5" fill="#880000"/>
+    <circle cx="-6" cy="-9" r="3" fill="#880000"/>
+    <circle cx="0" cy="-11" r="3" fill="#880000"/>
+    <circle cx="6" cy="-9" r="3" fill="#880000"/>
+    <path d="M-5,3 Q-15,8 -25,6" stroke="#660000" stroke-width="2" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Corner blood drips -->
+  <path d="M0,0 L0,40" stroke="#880000" stroke-width="3" opacity="0.3"/>
+  <circle cx="0" cy="57" r="3" fill="#880000" opacity="0.2"/>
+  <path d="M15,0 L15,60" stroke="#880000" stroke-width="2.5" opacity="0.25"/>
+  <path d="M30,0 L30,25" stroke="#880000" stroke-width="2" opacity="0.2"/>
+  <path d="M800,0 L800,50" stroke="#880000" stroke-width="3" opacity="0.3"/>
+  <circle cx="800" cy="52" r="3" fill="#880000" opacity="0.2"/>
+  <path d="M785,0 L785,35" stroke="#880000" stroke-width="2" opacity="0.2"/>
+  <path d="M770,0 L770,65" stroke="#880000" stroke-width="2.5" opacity="0.25"/>
+
+  <!-- Corner brackets -->
+  <path d="M25,25 L25,60" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M25,25 L60,25" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M775,25 L775,60" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M775,25 L740,25" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M25,575 L25,540" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M25,575 L60,575" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M775,575 L775,540" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+  <path d="M775,575 L740,575" stroke="#cc0000" stroke-width="2" opacity="0.4"/>
+
+  <!-- Blood pool bottom -->
+  <ellipse cx="400" cy="595" rx="200" ry="15" fill="#220000" opacity="0.3"/>
+  <ellipse cx="400" cy="598" rx="150" ry="8" fill="#330000" opacity="0.2"/>
+
+  <!-- Heartbeat line -->
+  <path d="M50,555 L200,555 L220,540 L235,570 L250,540 L265,555 L750,555" stroke="#880000" stroke-width="1" fill="none" opacity="0.2"/>
+
+  <!-- Version -->
+  <text x="765" y="568" text-anchor="end" font-family="monospace" font-size="9" fill="#440000" opacity="0.5">
+    v.BLOOD // KISHWOR
+  </text>
+
+</svg>
